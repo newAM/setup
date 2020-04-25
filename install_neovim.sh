@@ -9,7 +9,8 @@ apt_install_if_not() {
     else
         echo "installing $pkg..."
         sudo apt install -y "$pkg"
-        echo "done installing $pkg\n"
+        echo "done installing $pkg"
+        echo ""
     fi
 }
 
@@ -27,7 +28,8 @@ else
     echo "installing vim-plug..."
     curl -fLo "$vim_plug" --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    echo "done installing vim-plug\n"
+    echo "done installing vim-plug"
+    echo ""
 fi
 
 nvim_config="$HOME/.config/nvim"
@@ -47,7 +49,8 @@ then
 else
     echo "installing black..."
     sudo -H python3 -m pip install black
-    echo "done installing black\n"
+    echo "done installing black"
+    echo ""
 fi
 
 echo "installing vim plugins..."
