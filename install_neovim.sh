@@ -43,19 +43,22 @@ else
         https://raw.githubusercontent.com/newAM/dotfiles/master/.config/nvim/init.vim
 fi
 
-if python3 -m black --version
+black_venv="$HOME/.local/share/nvim/black"
+if [[ -d $black_venv ]]
 then
-    echo "black already installed"
-else
-    echo "installing black..."
-    sudo -H python3 -m pip install black
-    echo "done installing black"
-    echo ""
+    echo "removing black venv: $black_venv"
+    rm -rf "$black_venv"
 fi
+
+echo "creating black venv: $black_venv"
+python3.8 -m virtualenv "$black_venv"
+source "$black_venv/bin/activate"
+pip install --upgrade git+https://github.com/psf/black.git
+deactivate
 
 echo "installing vim plugins..."
 nvim +PlugInstall +qall
 
 echo "building YouCompleteMe..."
 sudo apt install -y build-essential python3.8-dev
-python3.8 ~/.config/nvim/plugged/YouCompleteMe/install.py --rust-completer
+python3.8 "$HOME/.config/nvim/plugged/YouCompleteMe/install.py" --rust-completer
