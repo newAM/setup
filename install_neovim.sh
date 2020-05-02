@@ -53,7 +53,7 @@ fi
 echo "creating black venv: $black_venv"
 python3.8 -m virtualenv "$black_venv"
 source "$black_venv/bin/activate"
-pip install --upgrade git+https://github.com/psf/black.git
+pip install 'black==19.10b0'
 deactivate
 
 echo "installing vim plugins..."
