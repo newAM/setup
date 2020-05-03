@@ -19,6 +19,7 @@ apt_install_if_not git
 apt_install_if_not curl
 apt_install_if_not cmake
 apt_install_if_not pip3 python3-pip
+apt_install_if_not python3.8
 
 vim_plug="$HOME/.local/share/nvim/site/autoload/plug.vim"
 if [[ -f $vim_plug ]]
