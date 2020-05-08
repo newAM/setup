@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-sudo apt install -y git zsh
+sudo apt install -y curl fzf git zsh
 
 omz="$HOME/.oh-my-zsh"
 if [[ -d $omz ]]
