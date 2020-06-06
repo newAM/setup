@@ -1,9 +1,10 @@
 #!/bin/bash
+# shellcheck disable=SC1090
 set -e
 
 apt_install_if_not() {
     local pkg="${2:-$1}"
-    if at=$(command -v $1);
+    if at="$(command -v "$1")";
     then
         echo "$pkg is already installed: $at"
     else

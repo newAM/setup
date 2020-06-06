@@ -36,4 +36,4 @@ install_plugin() {
 install_plugin zsh-autosuggestions
 install_plugin zsh-syntax-highlighting
 
-echo "run 'chsh -s `which zsh`' to change the default shell"
+echo "run 'chsh -s $(command -v zsh)' to change the default shell"

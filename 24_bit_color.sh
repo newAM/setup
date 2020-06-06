@@ -7,12 +7,12 @@
 #   <r> <g> <b> range from 0 to 255 inclusive.
 #   The escape sequence ^[0m returns output to default
 
-setBackgroundColor()
+set_background_color()
 {
     echo -en "\x1b[48;2;$1;$2;$3""m"
 }
 
-resetOutput()
+reset_output()
 {
     echo -en "\x1b[0m\n"
 }
@@ -22,12 +22,12 @@ resetOutput()
 # Echoes "$red $green $blue" where
 # $red $green and $blue are integers
 # ranging between 0 and 255 inclusive
-rainbowColor()
+rainbow_color()
 { 
-    let h=$1/43
-    let f=$1-43*$h
-    let t=$f*255/43
-    let q=255-t
+    h="$(($1/43))"
+    f="$(($1-43*h))"
+    t="$((f*255/43))"
+    q="$((255-t))"
 
     if [ $h -eq 0 ]
     then
@@ -53,47 +53,49 @@ rainbowColor()
     fi
 }
 
-for i in `seq 0 127`; do
-    setBackgroundColor $i 0 0
+for i in $(seq 0 127); do
+    set_background_color "$i" 0 0
     echo -en " "
 done
-resetOutput
-for i in `seq 255 128`; do
-    setBackgroundColor $i 0 0
+reset_output
+for i in $(seq 255 128); do
+    set_background_color "$i" 0 0
     echo -en " "
 done
-resetOutput
+reset_output
 
-for i in `seq 0 127`; do
-    setBackgroundColor 0 $i 0
+for i in $(seq 0 127); do
+    set_background_color 0 "$i" 0
     echo -n " "
 done
-resetOutput
-for i in `seq 255 128`; do
-    setBackgroundColor 0 $i 0
+reset_output
+for i in $(seq 255 128); do
+    set_background_color 0 "$i" 0
     echo -n " "
 done
-resetOutput
+reset_output
 
-for i in `seq 0 127`; do
-    setBackgroundColor 0 0 $i
+for i in $(seq 0 127); do
+    set_background_color 0 0 "$i"
     echo -n " "
 done
-resetOutput
-for i in `seq 255 128`; do
-    setBackgroundColor 0 0 $i
+reset_output
+for i in $(seq 255 128); do
+    set_background_color 0 0 "$i"
     echo -n " "
 done
-resetOutput
+reset_output
 
-for i in `seq 0 127`; do
-    setBackgroundColor `rainbowColor $i`
+for i in $(seq 0 127); do
+    # shellcheck disable=SC2046
+    set_background_color $(rainbow_color "$i")
     echo -n " "
 done
-resetOutput
-for i in `seq 255 128`; do
-    setBackgroundColor `rainbowColor $i`
+reset_output
+for i in $(seq 255 128); do
+    # shellcheck disable=SC2046
+    set_background_color $(rainbow_color "$i")
     echo -n " "
 done
-resetOutput
+reset_output
 

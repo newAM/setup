@@ -3,6 +3,11 @@ set -e
 
 sudo apt update
 sudo apt install -y \
+    ack-grep \
+    fzf \
     git \
     htop \
-    iotop
+    iotop \
+    rename \
+    ripgrep \
+    shellcheck
