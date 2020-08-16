@@ -17,6 +17,7 @@ echo ""
 
 # code --list-extensions
 declare -a extensions=(
+    Antyos.openscad
     be5invis.toml
     lextudio.restructuredtext
     matklad.rust-analyzer
@@ -27,7 +28,9 @@ declare -a extensions=(
     ms-vscode.cpptools
     rust-lang.rust
     twxs.cmake
-    webfreak.debug 
+    vadimcn.vscode-lldb
+    webfreak.debug
+    wmaurer.change-case
 )
 for ext in "${extensions[@]}"; do
     code --install-extension "$ext"
