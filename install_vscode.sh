@@ -19,6 +19,7 @@ echo ""
 declare -a extensions=(
     Antyos.openscad
     be5invis.toml
+    cssho.vscode-svgviewer
     lextudio.restructuredtext
     matklad.rust-analyzer
     monokai.theme-monokai-pro-vscode
