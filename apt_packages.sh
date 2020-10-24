@@ -8,6 +8,7 @@ sudo apt install -y \
     git \
     htop \
     iotop \
+    libclang-dev \
     libssl-dev \
     libusb-dev \
     pkg-config \
