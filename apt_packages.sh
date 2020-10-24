@@ -10,6 +10,7 @@ sudo apt install -y \
     iotop \
     libssl-dev \
     libusb-dev \
+    pkg-config \
     rename \
     ripgrep \
     shellcheck
