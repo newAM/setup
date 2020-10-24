@@ -8,6 +8,8 @@ sudo apt install -y \
     git \
     htop \
     iotop \
+    libssl-dev \
+    libusb-dev \
     rename \
     ripgrep \
     shellcheck
