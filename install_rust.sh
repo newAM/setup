@@ -4,6 +4,8 @@ set -e
 if rustup --version;
 then
     echo "rustup is already installed"
+    rustup self update
+    rustup update
 else
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     # shellcheck disable=SC1090
