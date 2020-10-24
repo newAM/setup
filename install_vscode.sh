@@ -20,6 +20,7 @@ declare -a extensions=(
     Antyos.openscad
     be5invis.toml
     cssho.vscode-svgviewer
+    dtsvet.vscode-wasm
     esbenp.prettier-vscode
     lextudio.restructuredtext
     matklad.rust-analyzer
@@ -29,6 +30,7 @@ declare -a extensions=(
     ms-vscode.cmake-tools
     ms-vscode.cpptools
     rust-lang.rust
+    ryanluker.vscode-coverage-gutters
     twxs.cmake
     vadimcn.vscode-lldb
     webfreak.debug
