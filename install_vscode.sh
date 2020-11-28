@@ -20,6 +20,7 @@ declare -a extensions=(
     Antyos.openscad
     be5invis.toml
     cssho.vscode-svgviewer
+    dan-c-underwood.arm
     dtsvet.vscode-wasm
     esbenp.prettier-vscode
     lextudio.restructuredtext
