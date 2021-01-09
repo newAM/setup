@@ -4,6 +4,8 @@ set -e
 sudo apt update
 sudo apt install -y \
     ack-grep \
+    build-essential \
+    curl \
     fzf \
     git \
     htop \
