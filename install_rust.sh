@@ -33,6 +33,7 @@ declare -a crates=(
     cargo-readme
     cargo-spellcheck
     cargo-tarpaulin
+    cargo-update
     debcargo
     du-dust
     exa
