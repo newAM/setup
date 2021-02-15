@@ -3,7 +3,6 @@ set -e
 
 sudo apt update
 sudo apt install -y \
-    ack-grep \
     build-essential \
     curl \
     fzf \
@@ -11,7 +10,9 @@ sudo apt install -y \
     htop \
     iotop \
     libclang-dev \
+    libftdi1-dev \
     libssl-dev \
+    libusb-1.0-0-dev \
     libusb-dev \
     pkg-config \
     rename \
