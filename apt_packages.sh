@@ -14,6 +14,7 @@ sudo apt install -y \
     libssl-dev \
     libusb-1.0-0-dev \
     libusb-dev \
+    netcat \
     pkg-config \
     rename \
     ripgrep \
