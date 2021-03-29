@@ -19,6 +19,7 @@ echo ""
 # code --list-extensions
 declare -a extensions=(
     Antyos.openscad
+    ban.spellright
     be5invis.toml
     cssho.vscode-svgviewer
     dan-c-underwood.arm
@@ -29,14 +30,17 @@ declare -a extensions=(
     monokai.theme-monokai-pro-vscode
     ms-azuretools.vscode-docker
     ms-python.python
+    ms-python.vscode-pylance
+    ms-toolsai.jupyter
+    ms-vscode-remote.remote-ssh
+    ms-vscode-remote.remote-ssh-edit
     ms-vscode.cmake-tools
     ms-vscode.cpptools
-    rust-lang.rust
     ryanluker.vscode-coverage-gutters
     twxs.cmake
-    vadimcn.vscode-lldb
+    usernamehw.errorlens
     webfreak.debug
-    wmaurer.change-case
+    wmaurer.change-cas
 )
 for ext in "${extensions[@]}"; do
     code --install-extension "$ext"
