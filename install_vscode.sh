@@ -23,11 +23,9 @@ declare -a extensions=(
     be5invis.toml
     cssho.vscode-svgviewer
     dan-c-underwood.arm
-    dtsvet.vscode-wasm
-    esbenp.prettier-vscode
-    lextudio.restructuredtext
+    eamodio.gitlens
+    keenethics.keen-neutral-icon-theme
     matklad.rust-analyzer
-    monokai.theme-monokai-pro-vscode
     ms-azuretools.vscode-docker
     ms-python.python
     ms-python.vscode-pylance
@@ -40,7 +38,7 @@ declare -a extensions=(
     twxs.cmake
     usernamehw.errorlens
     webfreak.debug
-    wmaurer.change-cas
+    wmaurer.change-case
 )
 for ext in "${extensions[@]}"; do
     code --install-extension "$ext"
