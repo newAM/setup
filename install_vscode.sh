@@ -22,6 +22,7 @@ declare -a extensions=(
     ban.spellright
     be5invis.toml
     cssho.vscode-svgviewer
+    dakara.transformer
     dan-c-underwood.arm
     eamodio.gitlens
     keenethics.keen-neutral-icon-theme
